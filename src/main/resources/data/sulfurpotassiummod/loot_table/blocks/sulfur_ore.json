@@ -1,8 +1,7 @@
 {
   "type": "minecraft:block",
   "pools": [
-    {
-	  "name": "main",
+    {"name": "main",
       "rolls": 1,
       "entries": [
         {
@@ -14,18 +13,17 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:silk_touch",
-                        "levels": {
-                          "min": 1
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantments": "minecraft:silk_touch"
                         }
-                      }
-                    ]
+                      ]
+                    }
                   }
                 }
               ],
-              "name": "sulfurpotassiummod:sulfur_nether_ore"
+              "name": "sulfurpotassiummod:sulfur_ore"
             },
             {
               "type": "minecraft:item",

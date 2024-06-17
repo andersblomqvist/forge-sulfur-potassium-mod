@@ -2,8 +2,8 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
+	  "name": "main",
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:alternatives",
@@ -14,18 +14,17 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:silk_touch",
-                        "levels": {
-                          "min": 1
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantments": "minecraft:silk_touch"
                         }
-                      }
-                    ]
+                      ]
+                    }
                   }
                 }
               ],
-              "name": "sulfurpotassiummod:potassium_ore"
+              "name": "sulfurpotassiummod:sulfur_nether_ore"
             },
             {
               "type": "minecraft:item",
@@ -39,7 +38,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "sulfurpotassiummod:raw_potassium"
+              "name": "sulfurpotassiummod:sulfur"
             }
           ]
         }

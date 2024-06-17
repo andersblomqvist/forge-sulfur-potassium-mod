@@ -9,6 +9,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 
 /**
@@ -29,8 +30,8 @@ public class ModItems {
 		registerItem("sulfur", SULFUR = new Item(new Item.Settings()), ItemGroups.INGREDIENTS);
 	}
 	
-	public static void registerItem(String name, Item item, ItemGroup group) {
-		Registry.register(Registries.ITEM, new Identifier(SulfurPotassiumMod.MOD_ID, name), item);
+	public static void registerItem(String name, Item item, RegistryKey<ItemGroup> group) {
+		Registry.register(Registries.ITEM, Identifier.of(SulfurPotassiumMod.MOD_ID, name), item);
 		ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
 	}
 }
