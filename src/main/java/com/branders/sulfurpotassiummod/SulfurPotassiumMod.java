@@ -11,21 +11,21 @@ import com.branders.sulfurpotassiummod.registry.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 /**
- * 	Sulfur Potassium Mod for Fabric 1.19
+ * Sulfur Potassium Mod for Fabric
  * 
- * 	@author Anders <Branders> Blomqvist
+ * @author Anders <Branders> Blomqvist
  */
 public class SulfurPotassiumMod implements ModInitializer {
-	
-	public static final String MOD_ID = "sulfurpotassiummod";
-	
-	public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
-	
-	@Override
-	public void onInitialize() {
-		ModConfigManager.initConfig(MOD_ID);
-		ModBlocks.register();
-		ModItems.register();
-		ModFeatures.register();
-	}
+
+    public static final String MOD_ID = "sulfurpotassiummod";
+
+    public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
+
+    @Override
+    public void onInitialize() {
+        ModConfigManager.initConfig(MOD_ID);
+        ModBlocks.register();
+        ModItems.register();
+        ModFeatures.register();
+    }
 }
