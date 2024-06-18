@@ -11,5 +11,13 @@
     "count": 1,
     "chance": 1
   }
-]
+],
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    }
+  ]
 }
