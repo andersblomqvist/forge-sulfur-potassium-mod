@@ -24,27 +24,27 @@ import net.minecraft.world.gen.feature.PlacedFeature;
  */
 public class ModFeatures {
 
-	private static int disable_gen_potassium = ConfigValues.CONFIG_SPEC.get("disable_gen_potassium");
-	private static int disable_gen_sulfur = ConfigValues.CONFIG_SPEC.get("disable_gen_sulfur");
-	private static int disable_gen_nether_sulfur = ConfigValues.CONFIG_SPEC.get("disable_gen_nether_sulfur");
+	private static final int disable_gen_potassium = ConfigValues.CONFIG_SPEC.get("disable_gen_potassium");
+	private static final int disable_gen_sulfur = ConfigValues.CONFIG_SPEC.get("disable_gen_sulfur");
+	private static final int disable_gen_nether_sulfur = ConfigValues.CONFIG_SPEC.get("disable_gen_nether_sulfur");
 
-    public static final RegistryKey<ConfiguredFeature<?, ?>> CF_POTASSIUM_MIDDLE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(SulfurPotassiumMod.MOD_ID, "potassium_ores_middle"));
-    public static final RegistryKey<ConfiguredFeature<?, ?>> CF_POTASSIUM_UPPER = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(SulfurPotassiumMod.MOD_ID, "potassium_ores_upper"));
-    public static final RegistryKey<ConfiguredFeature<?, ?>> CF_SULFUR = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(SulfurPotassiumMod.MOD_ID, "sulfur_ores"));
-    public static final RegistryKey<ConfiguredFeature<?, ?>> CF_SULFUR_NETHER = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(SulfurPotassiumMod.MOD_ID, "sulfur_nether_ores"));
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CF_POTASSIUM_MIDDLE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(SulfurPotassiumMod.MOD_ID, "potassium_ores_middle"));
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CF_POTASSIUM_UPPER = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(SulfurPotassiumMod.MOD_ID, "potassium_ores_upper"));
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CF_SULFUR = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(SulfurPotassiumMod.MOD_ID, "sulfur_ores"));
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CF_SULFUR_NETHER = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(SulfurPotassiumMod.MOD_ID, "sulfur_nether_ores"));
     
-    public static final RegistryKey<PlacedFeature> PF_POTASSIUM_MIDDLE = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(SulfurPotassiumMod.MOD_ID, "potassium_ores_middle"));
-    public static final RegistryKey<PlacedFeature> PF_POTASSIUM_UPPER  = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(SulfurPotassiumMod.MOD_ID, "potassium_ores_upper"));
-    public static final RegistryKey<PlacedFeature> PF_SULFUR  = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(SulfurPotassiumMod.MOD_ID, "sulfur_ores"));
-    public static final RegistryKey<PlacedFeature> PF_SULFUR_NETHER  = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(SulfurPotassiumMod.MOD_ID, "sulfur_nether_ores"));
+    public static final RegistryKey<PlacedFeature> PF_POTASSIUM_MIDDLE = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(SulfurPotassiumMod.MOD_ID, "potassium_ores_middle"));
+    public static final RegistryKey<PlacedFeature> PF_POTASSIUM_UPPER  = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(SulfurPotassiumMod.MOD_ID, "potassium_ores_upper"));
+    public static final RegistryKey<PlacedFeature> PF_SULFUR  = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(SulfurPotassiumMod.MOD_ID, "sulfur_ores"));
+    public static final RegistryKey<PlacedFeature> PF_SULFUR_NETHER  = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(SulfurPotassiumMod.MOD_ID, "sulfur_nether_ores"));
     
     public static void register() {
         // Overworld features
-        BiomeModifications.create(new Identifier(SulfurPotassiumMod.MOD_ID, "features"))
+        BiomeModifications.create(Identifier.of(SulfurPotassiumMod.MOD_ID, "features"))
             .add(ModificationPhase.ADDITIONS, BiomeSelectors.foundInOverworld(), overworldOres());
         
         // Nether features
-        BiomeModifications.create(new Identifier(SulfurPotassiumMod.MOD_ID, "nether_features"))
+        BiomeModifications.create(Identifier.of(SulfurPotassiumMod.MOD_ID, "nether_features"))
             .add(ModificationPhase.ADDITIONS, BiomeSelectors.foundInTheNether(), netherOres());
     }
     

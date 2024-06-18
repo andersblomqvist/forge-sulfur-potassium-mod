@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "sulfurpotassiummod:potassium"
+      "item": "sulfurpotassiummod:sulfur"
     }
   },
   "result": {
-    "item": "sulfurpotassiummod:potassium_block"
+    "id": "sulfurpotassiummod:sulfur_block"
   }
 }
